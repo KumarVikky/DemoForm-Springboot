@@ -21,7 +21,7 @@ public class RegistrationController {
 		System.out.println("output:::::::"+user);
 		String response = null;
 		String tempEmailId = user.getEmail();
-		if(!tempEmailId.isBlank() && !tempEmailId.isEmpty()) {	
+		if(tempEmailId != null && !tempEmailId.isEmpty()) {	
 			if(service.emailExists(tempEmailId)) {
 				throw new Exception("Email with "+tempEmailId+" already exists.");
 			}else {
