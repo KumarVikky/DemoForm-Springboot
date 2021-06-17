@@ -24,7 +24,7 @@ public class LoginController {
 		String userName = user.getUserName();
 		String userPassword = user.getPassword();
 		List<Student> response = null;
-		if(userName!=null && userPassword!=null) {
+		if(!userName.isBlank() && !userPassword.isBlank()) {
 			if(service.isValidUserCredential(userName, userPassword)) {
 				response = service.fetchAllStudents();
 			}else {
