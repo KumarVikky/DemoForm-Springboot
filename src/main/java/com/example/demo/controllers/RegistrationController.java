@@ -15,7 +15,7 @@ public class RegistrationController {
 	@Autowired
 	private RegistrationService service;
 	
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = {"http://localhost:4200","https://demo-form-app.herokuapp.com"})
 	@PostMapping(path="/user/register", produces = "application/json")
 	public String registerUser(@RequestBody User user) throws Exception {
 		System.out.println("output:::::::"+user);

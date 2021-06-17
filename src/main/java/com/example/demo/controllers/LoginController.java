@@ -18,7 +18,7 @@ public class LoginController {
 	@Autowired
 	private LoginService service;
 	
-	@CrossOrigin
+	@CrossOrigin(origins = {"http://localhost:4200","https://demo-form-app.herokuapp.com"})
 	@PostMapping(path="/user/login")
 	public List<Student> loginUser(@RequestBody User user) throws Exception {
 		String userName = user.getUserName();
