@@ -24,7 +24,7 @@ public class User {
 	@Column(name = "PASSWORD")
 	private String password;
 	@Column(name = "PHONE",columnDefinition = "varchar(15)")
-	private int phone;
+	private long phone;
 	@Column(name = "AGE")
 	private int age;
 	@Column(name = "SECRET_QUESTION")
@@ -37,7 +37,7 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String name, String email, String userName, String password, int phone, int age, String secretQuestion,
+	public User(String name, String email, String userName, String password, long phone, int age, String secretQuestion,
 			String secretAnswer) {
 		super();
 		this.name = name;
@@ -90,11 +90,11 @@ public class User {
 		this.password = password;
 	}
 
-	public int getPhone() {
+	public long getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(long phone) {
 		this.phone = phone;
 	}
 	
