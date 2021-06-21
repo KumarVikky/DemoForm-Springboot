@@ -19,7 +19,7 @@ public class LoginController {
 	
 	//@CrossOrigin(origins = {"http://localhost:4200","https://demo-form-app.herokuapp.com"})
 	@CrossOrigin(origins = "*",allowedHeaders = "*")
-	@PostMapping(path="/user/login")
+	@PostMapping(path="/user/login", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Object> loginUser(@RequestBody User user){
 		try {
 			String userName = user.getUserName();

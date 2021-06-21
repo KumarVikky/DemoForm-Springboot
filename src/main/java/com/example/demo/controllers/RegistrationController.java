@@ -20,7 +20,7 @@ public class RegistrationController {
 	
 	//@CrossOrigin(origins = {"http://localhost:4200","https://demo-form-app.herokuapp.com"})
 	@CrossOrigin(origins = "*",allowedHeaders = "*")
-	@PostMapping(path="/user/register", produces = "application/json")
+	@PostMapping(path="/user/register", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Object> registerUser(@RequestBody User user){
 		try {
 			System.out.println("output:::::::"+user);
