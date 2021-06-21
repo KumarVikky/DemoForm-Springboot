@@ -14,13 +14,8 @@ public class RegistrationService {
 	@Autowired 
 	private UserRepository repo;
 	
-	public String saveUser(User user) {
-		try {
-			repo.save(user);
-		}catch(Exception ex) {
-			return "Failed -->"+ex.getMessage();
-		}
-		return "User Created Successfully!.";
+	public void saveUser(User user) {
+		repo.save(user);
 	}
 	
 	public boolean emailExists(String email) {
